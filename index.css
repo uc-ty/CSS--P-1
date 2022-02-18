@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: #808080;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 500px;
+  margin: 45px 0 0 0;
+}
+p {
+  margin: 5px;
+}
+.border {
+  width: 99%;
+  border: 1px solid whitesmoke;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  margin: 45px 0 0 0;
+}
+.card {
+  height: 340px;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 15px 15px 15px;
+  transform-style: preserve-3d;
+  transition: all 1s linear;
+}
+.header_1 {
+  position: absolute;
+  color: #ffff;
+  padding-left: 19px;
+  padding-right: 33px;
+  top: 130px;
+  right: 0px;
+}
+.header {
+  position: absolute;
+  color: #ffff;
+  padding-left: 19px;
+  padding-right: 33px;
+  top: 108px;
+  right: 0px;
+  height: 21px;
+}
+#head1 {
+  background-color: rgb(239, 157, 1);
+}
+#head2 {
+  background-color: rgb(12, 151, 169);
+}
+#head3 {
+  background-color: rgb(133, 128, 151);
+}
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+.front {
+  background-color: #ffff;
+  z-index: 2;
+  backface-visibility: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  background-color: rgb(211, 211, 211);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.front > img {
+  width: 100%;
+  position: relative;
+  height: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+}
+.front > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  height: 45px;
+  width: 100px;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+}
+.back input:hover {
+  animation: back 3s linear infinite;
+  /* animation-timing-function: ease-in; */
+  cursor: pointer;
+}
+@keyframes back {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 206, 209, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 20px rgba(0, 206, 209, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 0px rgba(0, 206, 209, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 206, 209, 0.7);
+  }
+}
+
+.para {
+  text-align: center;
+}
