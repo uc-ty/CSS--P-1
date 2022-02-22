@@ -73,7 +73,6 @@ h1 {
   background-color: #ffff;
   z-index: 2;
   backface-visibility: hidden;
-  position: relative;
   display: flex;
   flex-direction: column;
 }
