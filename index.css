@@ -4,7 +4,7 @@
   font-family: sans-serif;
 }
 body {
-  background-color: #808080;
+  background-color: rgb(193, 193, 193);
 }
 
 .container {
@@ -16,6 +16,9 @@ body {
 }
 p {
   margin: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Times New Roman;
 }
 .border {
   width: 99%;
@@ -23,6 +26,8 @@ p {
   text-align: center;
 }
 h1 {
+  font-family: Times New Roman;
+  font-weight: 400;
   text-align: center;
   margin: 45px 0 0 0;
 }
@@ -37,6 +42,9 @@ h1 {
   transition: all 1s linear;
 }
 .header_1 {
+  font-family: Times New Roman;
+  font-weight: 400;
+  size: 16px;
   position: absolute;
   color: #ffff;
   padding-left: 19px;
@@ -78,7 +86,7 @@ h1 {
 }
 
 .back {
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(255, 255, 255);
   z-index: 1;
   transform: rotateY(180deg);
 }
@@ -98,6 +106,9 @@ h1 {
   align-items: center;
 }
 .button {
+  font-family: Times New Roman;
+  font-size: 16px;
+  font-weight: 400;
   height: 45px;
   width: 100px;
   margin: auto;
@@ -107,8 +118,7 @@ h1 {
   box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
 }
 .back input:hover {
-  animation: back 3s linear infinite;
-  /* animation-timing-function: ease-in; */
+  animation: back 0.5s linear infinite;
   cursor: pointer;
 }
 @keyframes back {
@@ -116,7 +126,7 @@ h1 {
     box-shadow: 0 0 0 0 rgba(0, 206, 209, 0.7);
   }
   40% {
-    box-shadow: 0 0 0 20px rgba(0, 206, 209, 0.7);
+    box-shadow: 0 0 0 10px rgba(0, 206, 209, 0.7);
   }
   80% {
     box-shadow: 0 0 0 0px rgba(0, 206, 209, 0.7);
