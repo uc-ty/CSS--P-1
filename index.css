@@ -6,9 +6,47 @@
 body {
   background-color: rgb(193, 193, 193);
 }
+.container,
+.card,
+.front,
+.back,
+.front > .content {
+  display: flex;
+}
+p,
+h1,
+.header_1,
+.button {
+  font-weight: 400;
+}
+.card,
+.front > img,
+.button {
+  position: relative;
+}
+.header_1,
+.header,
+.front,
+.back {
+  position: absolute;
+}
+p,
+.header_1,
+.button {
+  font-size: 16px;
+}
+p,
+h1,
+.header_1,
+.button {
+  font-family: Times New Roman;
+}
+.border,
+h1 {
+  text-align: center;
+}
 
 .container {
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   height: 500px;
@@ -16,36 +54,23 @@ body {
 }
 p {
   margin: 5px;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Times New Roman;
 }
 .border {
   width: 99%;
   border: 1px solid whitesmoke;
-  text-align: center;
 }
 h1 {
-  font-family: Times New Roman;
-  font-weight: 400;
-  text-align: center;
   margin: 45px 0 0 0;
 }
 .card {
   height: 340px;
   width: 250px;
-  position: relative;
-  display: flex;
   flex-direction: row;
   margin: 10px 15px 15px 15px;
   transform-style: preserve-3d;
   transition: all 1s linear;
 }
 .header_1 {
-  font-family: Times New Roman;
-  font-weight: 400;
-  font-size: 16px;
-  position: absolute;
   color: #ffff;
   padding-left: 19px;
   padding-right: 33px;
@@ -53,7 +78,6 @@ h1 {
   right: 0px;
 }
 .header {
-  position: absolute;
   color: #ffff;
   padding-left: 19px;
   padding-right: 33px;
@@ -74,14 +98,11 @@ h1 {
 .back {
   height: 100%;
   width: 100%;
-  display: flex;
-  position: absolute;
 }
 .front {
   background-color: #ffff;
   z-index: 2;
   backface-visibility: hidden;
-  display: flex;
   flex-direction: column;
 }
 
@@ -95,46 +116,27 @@ h1 {
 }
 .front > img {
   width: 100%;
-  position: relative;
   height: 50%;
   clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
 }
 .front > .content {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .button {
-  font-family: Times New Roman;
-  font-size: 16px;
-  font-weight: 400;
   height: 45px;
   width: 100px;
   margin: auto;
   border-radius: 20px;
   cursor: pointer;
-  position: relative;
   box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
 }
 .back input:hover {
   animation: back 1s linear infinite;
   cursor: pointer;
 }
-/* @keyframes back {
-  0% {
-    box-shadow: 0 0 0 0 rgba(192, 197, 197, 0.7);
-  }
-  40% {
-    box-shadow: 0 0 0 10px rgba(192, 197, 197, 0.7);
-  }
-  80% {
-    box-shadow: 0 0 0 0px rgba(192, 197, 197, 0.7);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(192, 197, 197, 0.7);
-  }
-} */
+
 @keyframes back {
   from {
     opacity: 1;
@@ -144,7 +146,4 @@ h1 {
     opacity: 0;
     box-shadow: 0 0 0 10px rgba(192, 197, 197, 0.7);
   }
-}
-.para {
-  text-align: center;
 }
