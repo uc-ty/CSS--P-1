@@ -125,10 +125,11 @@ h1 {
   align-items: center;
 }
 .button {
-  height: 45px;
-  width: 100px;
+  height: 50px;
+  width: 140px;
   margin: auto;
-  border-radius: 20px;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
 }
@@ -136,14 +137,46 @@ h1 {
   animation: back 1s linear infinite;
   cursor: pointer;
 }
-
+.btn1 {
+  background-color: rgb(239, 157, 1);
+}
+.btn2 {
+  background-color: rgb(12, 151, 169);
+}
+.btn3 {
+  background-color: rgb(133, 128, 151);
+}
 @keyframes back {
   from {
     opacity: 1;
   }
   to {
     transform: scale(1, 1);
-    opacity: 0;
+    /* opacity: 0; */
     box-shadow: 0 0 0 10px rgba(192, 197, 197, 0.7);
+  }
+}
+@media screen and (max-width: 757px) {
+  .card {
+    height: 340px;
+    width: 250px;
+    flex-direction: row;
+    margin: 10px 15px 15px 15px;
+    transform-style: preserve-3d;
+    transition: all 1s linear;
+  }
+  .front {
+    background-color: #ffff;
+    z-index: 2;
+    backface-visibility: hidden;
+    flex-direction: column;
+  }
+  .back {
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  .card:hover {
+    transform: rotateY(180 deg);
   }
 }
