@@ -1,10 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Times New Roman";
 }
 body {
-  background-color: rgb(193, 193, 193);
+  background-color: rgba(222, 221, 220, 0.8);
 }
 .container,
 .card,
@@ -39,7 +39,7 @@ p,
 h1,
 .header_1,
 .button {
-  font-family: Times New Roman;
+  font-family: "Times New Roman";
 }
 .border,
 h1 {
@@ -57,16 +57,20 @@ p {
 }
 .border {
   width: 99%;
-  border: 1px solid whitesmoke;
+  color: #715f5fed;
+  text-decoration: underline;
+  text-decoration-color: lightgrey;
+  text-underline-offset: 2px;
 }
 h1 {
   margin: 45px 0 0 0;
 }
 .card {
-  height: 340px;
-  width: 250px;
+  height: 380px;
+  width: 270px;
   flex-direction: row;
   margin: 10px 15px 15px 15px;
+  box-shadow: 10px 9px 9px 4px #cec7c7;
   transform-style: preserve-3d;
   transition: all 1s linear;
 }
@@ -74,14 +78,15 @@ h1 {
   color: #ffff;
   padding-left: 19px;
   padding-right: 33px;
-  top: 130px;
-  right: 10px;
+  top: 154px;
+  right: 9px;
+  height: 20px;
 }
 .header {
   color: #ffff;
   padding-left: 19px;
-  padding-right: 33px;
-  top: 108px;
+  padding-right: 15px;
+  top: 132px;
   right: 10px;
   height: 21px;
 }
