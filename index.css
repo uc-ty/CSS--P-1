@@ -146,9 +146,12 @@ h1 {
   width: 140px;
   margin: auto;
   border: none;
-  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 100px;
   cursor: pointer;
-  /* box-shadow: 0 0 0 rgba(204, 169, 44, 0.4 /40%); */
+  transition: all 0.2s linear;
+  background: #fff;
 }
 .btn1 {
   background: linear-gradient(
@@ -171,17 +174,45 @@ h1 {
     rgba(40, 180, 133)
   );
 }
-.back input:hover {
-  animation: back 1s linear infinite;
-  cursor: pointer;
-} 
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+}
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+}
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.4s;
+}
+.button:hover::after {
+  background: #fff;
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 
- @keyframes back {
-  from {
-    opacity: 1;
+.btn-animated {
+  animation: moveInBottom 0.3s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  to {
-    transform: scale(1, 1);
-    box-shadow: 0 0 0 10px rgba(192, 197, 197, 0.7);
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
