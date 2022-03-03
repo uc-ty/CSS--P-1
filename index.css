@@ -44,7 +44,7 @@ h1,
 h1 {
   text-align: center;
 }
-
+/* Container style */
 .container {
   justify-content: center;
   flex-wrap: wrap;
@@ -54,12 +54,14 @@ h1 {
 p {
   margin: 5px;
 }
+/* Styling text for inside the card element  */
 .border {
   width: 200px;
   color: #715f5fed;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
+/* Styling for the container header tag */
 h1 {
   margin: 45px 0 0 0;
   background: -webkit-linear-gradient(left, #7ed56f, #28b485);
@@ -67,6 +69,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* Card styling */
 .card {
   height: 450px;
   width: 300px;
@@ -76,6 +79,7 @@ h1 {
   transform-style: preserve-3d;
   transition: all 0.5s linear;
 }
+/* Styling the card header component */
 .header_1 {
   color: #ffff;
   padding: 10px 15px 6px 20px;
@@ -90,6 +94,7 @@ h1 {
   right: 10px;
   height: 21px;
 }
+/* Heading colors */
 #head1 {
   background: linear-gradient(
     to right bottom,
@@ -111,6 +116,7 @@ h1 {
     rgba(40, 180, 133)
   );
 }
+/* Front & back styling */
 .front,
 .back {
   height: 100%;
@@ -122,7 +128,6 @@ h1 {
   backface-visibility: hidden;
   flex-direction: column;
 }
-
 .back {
   background-color: rgb(255, 255, 255);
   z-index: -1;
@@ -141,18 +146,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-.button {
-  height: 50px;
-  width: 140px;
-  margin: auto;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  background: #fff;
-}
+/* Card back-ground color */
 .btn1 {
   background: linear-gradient(
     to right bottom,
@@ -173,6 +167,19 @@ h1 {
     rgba(126, 213, 111),
     rgba(40, 180, 133)
   );
+}
+/* Button funtionality  */
+.button {
+  height: 50px;
+  width: 140px;
+  margin: auto;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  background: #fff;
 }
 .button:hover {
   transform: translateY(-3px);
@@ -199,12 +206,10 @@ h1 {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-
 .btn-animated {
   animation: moveInBottom 0.3s ease-out;
   animation-fill-mode: backwards;
 }
-
 @keyframes moveInBottom {
   0% {
     opacity: 0;
