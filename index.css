@@ -74,7 +74,7 @@ h1 {
   margin: 10px 15px 15px 15px;
   box-shadow: 10px 10px 5px #cec7c7;
   transform-style: preserve-3d;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 .header_1 {
   color: #ffff;
@@ -118,14 +118,14 @@ h1 {
 }
 .front {
   background-color: #ffff;
-  z-index: 2;
+  z-index: 1;
   backface-visibility: hidden;
   flex-direction: column;
 }
 
 .back {
   background-color: rgb(255, 255, 255);
-  z-index: 1;
+  z-index: -1;
   transform: rotateY(180deg);
 }
 .card:hover {
@@ -148,11 +148,7 @@ h1 {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4 /40%);
-}
-.back input:hover {
-  animation: back 1s linear infinite;
-  cursor: pointer;
+  /* box-shadow: 0 0 0 rgba(204, 169, 44, 0.4 /40%); */
 }
 .btn1 {
   background: linear-gradient(
@@ -175,7 +171,12 @@ h1 {
     rgba(40, 180, 133)
   );
 }
-@keyframes back {
+.back input:hover {
+  animation: back 1s linear infinite;
+  cursor: pointer;
+} 
+
+ @keyframes back {
   from {
     opacity: 1;
   }
